@@ -1,7 +1,7 @@
 #include <cstring>
 #include <cstdio>
 #include <iostream>
-#include <sys/time.h>
+#include <time.h>
 #include "Client.h"
 
 Client::Client(SOCKET socket, struct sockaddr_storage clientaddr) {
@@ -21,10 +21,10 @@ Client::~Client() {
 
 std::string Client::getRequest() {
     int bytes_received, total_bytes = 0;
-    char data[1];
+    char data[2];
     while ((bytes_received = recv(_socket, data, 1, 0)) > 0) {
         total_bytes += bytes_received;
-
+        data[1] = '\0';
         _request.append(data);
 
     }

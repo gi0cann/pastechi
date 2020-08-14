@@ -8,18 +8,18 @@ A web server written in C++. (Continuation of http://github.com/gi0can/CppND-Cap
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
-4. Run it: `./minihttpd`.
+4. Run it: `./pastechi`.
 
 ### Windows
 1. Clone this repo.
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && msbuild minihttpd.sln /p:Configuration=Release`
-4. Run it: `Release\minihttpd.exe`.
+4. Run it: `Release\pastechi.exe`.
 
 ## Usage
 
 ### Start the server
-./minihttpd 
+./pastechi
 
 ### Add the files you want the server to serve in the directory "build/htdocs" 
 

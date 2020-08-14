@@ -35,7 +35,7 @@ void Server::createSocket() {
     // Make local address reusable
     int option = 1;
     if (setsockopt(_socket, SOL_SOCKET, 
-                SO_REUSEADDR, (void*)&option, sizeof(option)) < 0) {
+                SO_REUSEADDR, (const char*)&option, sizeof(option)) < 0) {
         std::cerr << "Failed to set SO_REUSEADDR. Error: " 
             << GETSOCKETERRNO() << "\n";
         throw ServerSetsockoptException();

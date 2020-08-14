@@ -86,7 +86,6 @@ void request_handler(std::unique_ptr<Client> client) {
 
     // Close client socket
     client->closeSocket();
-    mtx.unlock();
 
 }
 

@@ -1,4 +1,5 @@
 #include "portable_sockets.h"
+#include <iostream>
 
 bool init_sockets() {
 #if defined(_WIN32)
